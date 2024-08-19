@@ -89,8 +89,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
     // Coil
-    implementation ("io.coil-kt:coil:1.1.1")
-    implementation ("com.google.accompanist:accompanist-coil:0.7.0")
+//    implementation ("io.coil-kt:coil:1.1.1")
+//    implementation ("com.google.accompanist:accompanist-coil:0.7.0")
+    implementation("io.coil-kt:coil-compose:2.4.0") // Asegúrate de que sea compatible con Compose
     //    DAGGER HILT
     implementation("com.google.dagger:hilt-android:2.46")
     kapt("com.google.dagger:hilt-android-compiler:2.46")
@@ -99,7 +100,9 @@ dependencies {
 
     //noinspection GradleCompatible
     implementation ("com.android.support:palette-v7:28.0.0")
-
+    // Jetpack Compose y Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation("androidx.compose.ui:ui:1.6.8")
 
 }
 fun kapt(options: String) {

@@ -9,22 +9,26 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.pokedex.R
+import com.example.pokedex.presentation.pokemon_list.components.PokemonList
 import com.example.pokedex.presentation.pokemon_list.components.SearchBar
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
 fun PokemonListScreen(
-    navController: NavController = rememberNavController()//required to navigato to detailScreen
+    navController: NavController//required to navigato to detailScreen
 ) {
     Surface(
         color = MaterialTheme.colorScheme.background,
@@ -44,9 +48,12 @@ fun PokemonListScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(16.dp)
-            ){
+            ) {
                 //Here we'll implement the viewModel function
             }
+            Spacer(modifier = Modifier.height(16.dp))
+            PokemonList(navController = navController)
         }
     }
 }
+
