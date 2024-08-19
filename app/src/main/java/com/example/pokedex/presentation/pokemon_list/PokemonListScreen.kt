@@ -28,7 +28,8 @@ import com.example.pokedex.presentation.pokemon_list.components.SearchBar
 //@Preview(showBackground = true)
 @Composable
 fun PokemonListScreen(
-    navController: NavController//required to navigato to detailScreen
+    navController: NavController, //required to navigato to detailScreen
+    viewModel: PokemonListViewModel = hiltViewModel()
 ) {
     Surface(
         color = MaterialTheme.colorScheme.background,
@@ -48,8 +49,9 @@ fun PokemonListScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(16.dp)
-            ) {
+            ) { query ->
                 //Here we'll implement the viewModel function
+                viewModel.searchPokemonList(query)
             }
             Spacer(modifier = Modifier.height(16.dp))
             PokemonList(navController = navController)
