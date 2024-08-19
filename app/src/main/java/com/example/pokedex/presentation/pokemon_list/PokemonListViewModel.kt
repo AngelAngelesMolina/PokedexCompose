@@ -14,7 +14,6 @@ import com.example.pokedex.common.Constants.PAGE_SIZE
 import com.example.pokedex.common.Resource
 import com.example.pokedex.data.repository.PokemonRepositoryImpl
 import com.example.pokedex.domain.model.PokedexListEntry
-import com.example.pokedex.domain.repository.PokemonRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
